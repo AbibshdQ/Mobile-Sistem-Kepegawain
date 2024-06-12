@@ -1,5 +1,5 @@
 import 'package:android_simpeg/home_page.dart';
-import 'package:android_simpeg/login.dart';
+import 'package:android_simpeg/login_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: HomePage(),
+        home: LoginPage(),
         theme: ThemeData(
             brightness: Brightness.light, primarySwatch: Colors.blueGrey)
     );
