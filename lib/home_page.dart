@@ -1,3 +1,4 @@
+import 'package:android_simpeg/pegawai_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -97,7 +98,16 @@ class _HomePageState extends State<HomePage> {
                             border: OutlineInputBorder(
                                 borderSide:
                                     BorderSide(color: Colors.grey, width: 2),
-                                borderRadius: BorderRadius.circular(30))),
+                                borderRadius: BorderRadius.circular(30)),
+                                // enabledBorder: OutlineInputBorder(
+                                //   borderSide: BorderSide(color: Colors.grey, width: 2),
+                                //   borderRadius: BorderRadius.circular(30),
+                                // ),
+                                // focusedBorder: OutlineInputBorder(
+                                //   borderSide: BorderSide(color: Colors.blue, width: 2),
+                                //   borderRadius: BorderRadius.circular(30),
+                                // ),        
+                        ),
                       ),
                     ),
                   ),
@@ -106,7 +116,18 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       children: [
                         Category(imagepath: "assets/bid.png", title: "Absensi",),
-                        Category(imagepath: "assets/employee.png", title: "Pegawai",),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => PegawaiPages()),
+                            );
+                          },
+                          child: Category(
+                            imagepath: "assets/employee.png",
+                            title: "Pegawai",
+                          ),
+                        ),
                         Category(imagepath: "assets/department.png", title: "Jabatan",),
                         Category(imagepath: "assets/letter.png", title: "Surat",),
                         
