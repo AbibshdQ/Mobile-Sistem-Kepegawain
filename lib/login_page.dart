@@ -1,3 +1,5 @@
+import 'package:android_simpeg/home_page.dart';
+import 'package:android_simpeg/host.dart';
 import 'package:android_simpeg/login_home_page.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
@@ -114,7 +116,8 @@ class _LoginPageState extends State<LoginPage> {
                                 width: MediaQuery.of(context).size.width,
                                 child: MaterialButton(
                                   onPressed: (){
-                                    loginValidation(context);
+                                    // loginValidation(context);
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()),);
                                   },
                                   child: const Text("Login", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 16)),
                                   color: Color.fromARGB(201, 255, 119, 0),
@@ -221,7 +224,7 @@ class _LoginPageState extends State<LoginPage> {
       Response response;
       var dio = Dio();
       response = await dio.post(
-        'https://reqres.in/api/login',
+        '${ngrok}/api/login',
         data: {
           'email': email,
           'password': password
