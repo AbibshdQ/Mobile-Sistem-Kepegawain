@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import 'package:android_simpeg/notificatioan.dart';
+=======
+>>>>>>> 61d8bcdf941b74ab1ec7d36a14351e32e68ea454
 import 'package:android_simpeg/pegawai_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -141,6 +144,7 @@ class _HomePageState extends State<HomePage> {
                             hintText: "Search",
                             prefixIcon: Icon(Icons.search),
                             border: OutlineInputBorder(
+<<<<<<< HEAD
                                 borderSide: BorderSide(
                                     color:
                                         const Color.fromARGB(255, 205, 205, 205),
@@ -189,6 +193,44 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ],
                       ),
+=======
+                                borderSide:
+                                    BorderSide(color: Colors.grey, width: 2),
+                                borderRadius: BorderRadius.circular(30)),
+                                // enabledBorder: OutlineInputBorder(
+                                //   borderSide: BorderSide(color: Colors.grey, width: 2),
+                                //   borderRadius: BorderRadius.circular(30),
+                                // ),
+                                // focusedBorder: OutlineInputBorder(
+                                //   borderSide: BorderSide(color: Colors.blue, width: 2),
+                                //   borderRadius: BorderRadius.circular(30),
+                                // ),        
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(25.0),
+                    child: Row(
+                      children: [
+                        Category(imagepath: "assets/bid.png", title: "Absensi",),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => PegawaiPages()),
+                            );
+                          },
+                          child: Category(
+                            imagepath: "assets/employee.png",
+                            title: "Pegawai",
+                          ),
+                        ),
+                        Category(imagepath: "assets/department.png", title: "Jabatan",),
+                        Category(imagepath: "assets/letter.png", title: "Surat",),
+                        
+                      ],
+>>>>>>> 61d8bcdf941b74ab1ec7d36a14351e32e68ea454
                     ),
                   ],
                 )

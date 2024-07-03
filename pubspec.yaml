@@ -40,8 +40,11 @@ dependencies:
   dio: ^4.0.4
   shared_preferences: ^2.0.13
   cached_network_image: ^3.2.0
+<<<<<<< HEAD
   location: ^4.4.0
   syncfusion_flutter_maps: ^26.1.40
+=======
+>>>>>>> 61d8bcdf941b74ab1ec7d36a14351e32e68ea454
 
 
   # The following adds the Cupertino Icons font to your application.
